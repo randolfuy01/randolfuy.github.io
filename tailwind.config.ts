@@ -13,8 +13,21 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        mainbackground: "rgb(201, 218, 191)",
+        sidebarbackground: "rgb(156, 169, 134)",
+        darkergreen: "rgb(128, 141, 124)",
+        darkestgreen: "rgb(95, 111, 101)",
+        offwhite: "rgb(250, 237, 206)",
+      },
+      clipPath: {
+        'circle': 'circle(50%)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };
 export default config;
+
