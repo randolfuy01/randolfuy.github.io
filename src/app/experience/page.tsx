@@ -23,7 +23,7 @@ export default function Experience() {
                     <div className="max-w-3xl text-left p-5">
                         <h1 className="text-2xl font-bold">Computer Science @ SFSU</h1>
                         <p className="text-1xl mt-4">Summer 2023 - Winter 2024</p>
-                        <div className='flex flex-row space-x-10 pt-5 items-center'>
+                        <div className='flex flex-col md:flex-row space-x-10 pt-5 items-center'>
                             <img src='/images/Go.png' className='max-h-12 max-w-12' />
                             <img src='/images/Java.png' className='max-h-12 max-w-12' />
                             <img src='/images/C++.png' className='max-h-12 max-w-12' />
@@ -39,7 +39,7 @@ export default function Experience() {
                     <div className="max-w-3xl text-left items-center p-5">
                         <h1 className="text-3xl font-bold">Data Engineer Intern @ PwC</h1>
                         <p className="text-1xl mt-4">June 2024 - August 2024</p>
-                        <div className='flex flex-row space-x-10 pt-5 items-center'>
+                        <div className='flex flex-col md:flex-row space-x-10 pt-5 items-center'>
                             <img src='/images/Python.png' className='ml-15 max-h-12 max-w-12' />
                             <img src='/images/graphQL.png' className='max-h-12 max-w-12' />
                             <img src='/images/Docker.png' className='max-h-12 max-w-12' />
@@ -53,7 +53,7 @@ export default function Experience() {
                     <div className="max-w-3xl text-left items-center p-5" >
                         <h1 className="text-3xl font-bold">Technology Consulting Intern @ PwC</h1>
                         <p className="text-1xl mt-4">May 2023 - July 2023</p>
-                        <div className='flex flex-row space-x-5 pt-5 items-center'>
+                        <div className='flex flex-col md:flex-row space-x-5 pt-5 items-center'>
                             <img src='/images/Python.png' className='max-h-12 max-w-12' />
                             <img src='/images/PowerBI.png' className='max-h-12 max-w-12' />
                             <img src='/images/Tableau.png' className='max-h-16 max-w-17' />
