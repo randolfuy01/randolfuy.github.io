@@ -27,10 +27,10 @@ const Home: React.FC = () => {
           <br></br>
           <div className='flex flex-row space-x-6 items-center justify-center'>
             <Link href='https://www.linkedin.com/in/gabe-uy/' target='_blank' rel='noopener noreferrer'>
-              <img src='/images/LinkedIn.png' className='max-h-12 max-w-12' />
+              <img src='/images/linkedin.png' className='max-h-12 max-w-12' />
             </Link>
             <Link href='https://github.com/randolfuy01' target='_blank' rel='noopener noreferrer'>
-              <img src='/images/GitHub.png' className='max-h-12 max-w-12' />
+              <img src='/images/github.png' className='max-h-12 max-w-12' />
             </Link>
             <Link href='https://medium.com/@randolfuy09' target='_blank' rel='noopener noreferrer'>
               <img src='/images/Medium.png' className="max-h-13 max-w-14" />
