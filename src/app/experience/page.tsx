@@ -12,14 +12,14 @@ export default function Experience() {
     return (
         <div className="relative min-h-screen bg-mainbackground font-mono">
             <button
-                className={`fixed top-4 left-4 ${isOpen ? 'ml-64 md:ml-80 lg:ml-96' : 'ml-0'} p-4 bg-gradient-to-r from-darkergreen to-darkestgreen text-black rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-300`}
+                className={`fixed top-4 left-4 ${isOpen ? 'ml-64 md:ml-80 lg:ml-96' : 'ml-0'} p-4 bg-gradient-to-r from-sidebarNavigation to-sidebarButton text-white rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-300`}
                 onClick={toggleSidebar}
             >
                 {isOpen ? 'Uncover' : 'Discover'}
             </button>
             <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
             <div className="flex flex-col md:flex-row">
-                <div className="flex flex-col justify-center items-left space-y-12 pr-5 text-black pt-24">
+                <div className="flex flex-col justify-center items-left space-y-12 pr-5 text-white pt-24">
                     <div className="max-w-3xl text-left p-5">
                         <h1 className="text-2xl font-bold">Computer Science @ SFSU</h1>
                         <p className="text-1xl mt-4">Summer 2023 - Winter 2024</p>
@@ -67,10 +67,10 @@ export default function Experience() {
                     <br></br>
                     <br></br>
                 </div>
-                <div className="flex flex-col flex-grow items-center space-y-24 pt-24 bg-white">
+                <div className="flex flex-col flex-grow items-center space-y-24 pt-24 bg-sidebarNavigation">
                     <br></br>
                     <a href='https://cs.sfsu.edu' target='_blank' rel='noopener noreferrer'>
-                        <img src='/images/SFSU.png' className="border rounded-[20%] border-black shadow-xl hover:shadow-[0_35px_35px_-15px_rgba(0,0,0,0.4)] transition-shadow duration-300 ease-in-out bg-white" style={{ borderWidth: '4px', height: '22rem', width: '22rem' }} />
+                        <img src='/images/SFSU.png' className="border rounded-[20%] border-black shadow-xl hover:shadow-[0_50px_50px_-10px_rgba(76,59,207,0.6)] transition-shadow duration-300 ease-in-out bg-white" style={{ borderWidth: '4px', height: '20rem', width: '20rem' }} />
                     </a>
                     <br></br>
                     <br></br>
@@ -78,7 +78,7 @@ export default function Experience() {
                     <br></br>
                     <br></br>
                     <a href='https://www.pwc.com/us/en.html' target='_blank' rel='noopener noreferrer'>
-                        <img src="/images/PWC.png" className="border rounded-[20%] border-black shadow-xl hover:shadow-[0_35px_35px_-15px_rgba(0,0,0,0.4)] transition-shadow duration-300 ease-in-out bg-white" style={{ borderWidth: '4px', height: '22rem', width: '22rem' }} />
+                        <img src="/images/PWC.png" className="border rounded-[20%] border-black shadow-xl hover:shadow-[0_50px_50px_-10px_rgba(76,59,207,0.6)] transition-shadow duration-300 ease-in-out bg-white" style={{ borderWidth: '4px', height: '20rem', width: '20rem' }} />
                     </a>
                     <br></br>
                     <br></br>
@@ -86,7 +86,7 @@ export default function Experience() {
                     <br></br>
                     <br></br>
                     <a href='https://www.pwc.com/us/en.html' target='_blank' rel='noopener noreferrer'>
-                        <img src="/images/PWC.png" className="border rounded-[20%] border-black shadow-xl hover:shadow-[0_35px_35px_-15px_rgba(0,0,0,0.4)] transition-shadow duration-300 ease-in-out bg-white" style={{ borderWidth: '4px', height: '22rem', width: '22rem' }} />
+                        <img src="/images/PWC.png" className="border rounded-[20%] border-black shadow-xl hover:shadow-[0_50px_50px_-10px_rgba(76,59,207,0.6)] transition-shadow duration-300 ease-in-out bg-white" style={{ borderWidth: '4px', height: '20rem', width: '20rem' }} />
                     </a>
                     <br></br>
                     <br></br>

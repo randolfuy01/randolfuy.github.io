@@ -14,8 +14,14 @@ export default function MiscPage() {
         redirectToAuthCodeFlow(clientId);
       } else {
         const accessToken = await getAccessToken(clientId, code);
-        const topArtists = await fetchUserTopArtists(accessToken);
-        console.log(topArtists);
+        const topTracks = await fetchUserTopTracks(accessToken);
+        let topTrackAnalytics = new Map<string, Object>();
+        for (let i = 0; i < topTracks["items"].length; i++) {
+          let trackAnalystics = await fetchTrackInformation(accessToken, topTracks["items"][i].id);
+          console.log(topTracks["items"][i].name, trackAnalystics);
+          topTrackAnalytics.set(topTracks["items"][i].name, trackAnalystics);
+        }
+        console.log(topTrackAnalytics.get("Sativa"));
       }
     }
 
@@ -31,12 +37,15 @@ export default function MiscPage() {
   return (
     <div>
       <button
-        className={`fixed top-4 left-4 ${isOpen ? 'ml-64 md:ml-80 lg:ml-96' : 'ml-0'} p-4 bg-gradient-to-r from-darkergreen to-darkestgreen text-black rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-300`}
+        className={`fixed top-4 left-4 ${isOpen ? 'ml-64 md:ml-80 lg:ml-96' : 'ml-0'} p-4 bg-gradient-to-r from-sidebarNavigation to-sidebarButton text-white rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-transform duration-300`}
         onClick={toggleSidebar}
       >
         {isOpen ? 'Uncover' : 'Discover'}
       </button>
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+      <div className="bg-mainbackground">
+
+      </div>
     </div>
   );
 }
@@ -97,28 +106,28 @@ async function getAccessToken(clientId: string, code: string): Promise<string> {
   return access_token;
 }
 
-async function fetchProfile(token: string): Promise<any> {
-  const result = await fetch("https://api.spotify.com/v1/me", {
-    method: "GET",
-    headers: { Authorization: `Bearer ${token}` }
-  });
-
-  return await result.json();
-}
-
-async function fetchUserAlbums(token: string): Promise<any> {
-  const result = await fetch("https://api.spotify.com/v1/me/albums", {
-    method: "GET",
-    headers: { Authorization: `Bearer ${token}` }
-  });
-
-  return await result.json();
-}
-
 async function fetchUserTopArtists(token: string): Promise<any> {
-  const result = await fetch("https://api.spotify.com/v1/me/top/artists", {
+  const result = await fetch("https://api.spotify.com/v1/me/top/artists?limit=20", {
     method: "GET",
-    headers: { Authorization: `Bearer ${token}` }
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+  return await result.json();
+}
+
+async function fetchUserTopTracks(token: string): Promise<any> {
+  const result = await fetch("https://api.spotify.com/v1/me/top/tracks?limit=20", {
+    method: "GET",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+  return await result.json();
+}
+
+async function fetchTrackInformation(token: string, id: string): Promise<any> {
+  const result = await fetch("https://api.spotify.com/v1/audio-analysis/" + id, {
+    method: "GET",
+    headers: { Authorization: `Bearer ${token}` },
   });
 
   return await result.json();

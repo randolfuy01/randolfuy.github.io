@@ -14,13 +14,13 @@ const Home: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-mainbackground font-mono">
       <button
-        className={`fixed top-4 left-4 ${isOpen ? 'ml-64 md:ml-80 lg:ml-96' : 'ml-0'} p-4 bg-gradient-to-r from-mainbackground to-sidebarbackground text-black rounded-full shadow-xl hover:shadow-3xl transform hover:scale-105 transition-transform duration-300 border-black border-solid`}
+        className={`fixed top-4 left-4 ${isOpen ? 'ml-64 md:ml-80 lg:ml-96' : 'ml-0'} p-4 bg-gradient-to-r from-sidebarNavigation to-sidebarButton text-white rounded-full shadow-xl hover:shadow-3xl transform hover:scale-105 transition-transform duration-300 border-black border-solid`}
         onClick={toggleSidebar}
       >
         {isOpen ? 'Uncover' : 'Discover'}
       </button>
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="pt-24 px-4 flex flex-col justify-center items-center space-y-12 text-black">
+      <div className="pt-24 px-4 flex flex-col justify-center items-center space-y-12 text-white">
         <div className="max-w-4xl text-center items-center">
           <br></br>
           <h1 className="text-4xl font-bold text-center">Randolf [Gabe] Uy</h1>
@@ -32,9 +32,6 @@ const Home: React.FC = () => {
             <Link href='https://github.com/randolfuy01' target='_blank' rel='noopener noreferrer'>
               <img src='/images/GitHub.png' className='max-h-12 max-w-12' />
             </Link>
-            <Link href='https://www.kaggle.com/randolfgabrielleuy' target='_blank' rel='noopener noreferrer'>
-              <img src='/images/Kaggle.png' className='pt-2 max-h-12 max-w-18' />
-            </Link>
             <Link href='https://medium.com/@randolfuy09' target='_blank' rel='noopener noreferrer'>
               <img src='/images/Medium.png' className="max-h-13 max-w-14" />
             </Link>
@@ -44,7 +41,7 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="p-2 inline-block">
-          <img src='/images/Pfp.png' className=' border rounded-[20%] border-black h-full w-full object-cover' style={{ borderWidth: '4px', height:'16rem', width:'16rem'}}/>
+          <img src='/images/Pfp.png' className=' border rounded-[20%] border-black h-full w-full object-cover' style={{ borderWidth: '4px', height: '16rem', width: '16rem' }} />
         </div>
         <Typewriting />
         <br></br>
